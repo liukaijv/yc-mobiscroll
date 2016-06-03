@@ -1,8 +1,12 @@
 .hg/*
 .hgignore
 .hgtags
-.gitignore
 compiler.jar
 yuicompressor.jar
 minify.bat
 mobiscroll.full.*
+.idea/workspace.xml
+.idea/
+dist/
+node_modules/
+

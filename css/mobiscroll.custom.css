@@ -1,0 +1,26 @@
+.mbsc-ios .dwbc{
+	background-color: #f08f00;
+	border-bottom: none;
+}
+.mbsc-ios .dwb{
+	color: #fff;
+}
+.mbsc-ios .dwb-s .dwb{
+	font-weight: normal;
+}
+.mbsc-ios .dw-sel{
+	color: #ff9800;
+}
+
+.dwfl{
+	max-width: 100%;
+    -webkit-box-flex: 1 1 0;
+    -webkit-flex: 1 1 0;
+    -ms-flex: 1 1 0;
+    flex: 1 1 0;
+}
+
+.mbsc-ios .dw-li{
+	font-size: 16px;
+	text-align: center;
+}

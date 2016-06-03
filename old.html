@@ -11,9 +11,75 @@
 
     <!-- Mobiscroll JS and CSS Includes -->
     
-    <script src="dist/yc-mobiscroll.min.js"></script>   
+    <script src="js/mobiscroll.core.js"></script>
+    <script src="js/mobiscroll.frame.js"></script>
+    <script src="js/mobiscroll.scroller.js"></script>
 
-    <link href="dist/yc-mobiscroll.min.css" rel="stylesheet" type="text/css" />   
+    <script src="js/mobiscroll.util.datetime.js"></script>
+    <script src="js/mobiscroll.datetimebase.js"></script>
+    <script src="js/mobiscroll.datetime.js"></script>
+    <script src="js/mobiscroll.select.js"></script>
+    <script src="js/mobiscroll.listbase.js"></script>
+    <script src="js/mobiscroll.image.js"></script>
+    <script src="js/mobiscroll.treelist.js"></script>
+
+<!--     <script src="js/mobiscroll.frame.android.js"></script>
+    <script src="js/mobiscroll.frame.android-holo.js"></script>
+    <script src="js/mobiscroll.frame.ios-classic.js"></script> -->
+    <script src="js/mobiscroll.frame.ios.js"></script>
+<!--     <script src="js/mobiscroll.frame.jqm.js"></script>
+    <script src="js/mobiscroll.frame.sense-ui.js"></script>
+    <script src="js/mobiscroll.frame.wp.js"></script> -->
+
+    <!-- <script src="js/mobiscroll.android-holo-light.js"></script>
+    <script src="js/mobiscroll.wp-light.js"></script>
+    <script src="js/mobiscroll.mobiscroll-dark.js"></script> -->
+
+   <!--  <script src="js/i18n/mobiscroll.i18n.cs.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.de.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.en-UK.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.es.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.fa.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.fr.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.hu.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.it.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.ja.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.nl.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.no.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.pl.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.pt-BR.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.pt-PT.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.ro.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.ru.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.ru-UA.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.sk.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.sv.js"></script>
+    <script src="js/i18n/mobiscroll.i18n.tr.js"></script> -->
+    <script src="js/i18n/mobiscroll.i18n.zh.js"></script>
+
+    <link href="css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.icons.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.css" rel="stylesheet" type="text/css" />
+   <!--  <link href="css/mobiscroll.frame.android.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.android-holo.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.ios-classic.css" rel="stylesheet" type="text/css" /> -->
+    <link href="css/mobiscroll.frame.ios.css" rel="stylesheet" type="text/css" />
+   <!--  <link href="css/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.sense-ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.frame.wp.css" rel="stylesheet" type="text/css" /> -->
+    <link href="css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+  <!--   <link href="css/mobiscroll.scroller.android.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.android-holo.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.ios-classic.css" rel="stylesheet" type="text/css" /> -->
+    <link href="css/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+<!--     <link href="css/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.sense-ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.scroller.wp.css" rel="stylesheet" type="text/css" /> -->
+    <link href="css/mobiscroll.image.css" rel="stylesheet" type="text/css" />
+
+ <!--    <link href="css/mobiscroll.android-holo-light.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.wp-light.css" rel="stylesheet" type="text/css" />
+    <link href="css/mobiscroll.mobiscroll-dark.css" rel="stylesheet" type="text/css" /> -->
     
     <style type="text/css">
         /* Demo Page styling, you can disregard this in your implementation */
@@ -38,15 +104,11 @@
                 });
                 
                 // Date demo initialization
-                $('#demo_date').mobiscroll().date({                  
-                    dateFormat:'yy-mm-dd',
-                    monthNamesShort:['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
-                    dateOrder:'yyMdd',
+                $('#demo_date').mobiscroll().date({
                     theme: theme,     // Specify theme like: theme: 'ios' or omit setting to use default 
                     mode: mode,       // Specify scroller mode like: mode: 'mixed' or omit setting to use default 
                     display: display, // Specify display mode like: display: 'bottom' or omit setting to use default 
                     lang: lang        // Specify language like: lang: 'pl' or omit setting to use default 
-
                 });
                 
                 // Date & Time demo initialization
@@ -124,7 +186,15 @@
             <label for="theme">Theme</label>
             <select name="theme" id="theme" class="settings">
                 <option value="">Mobiscroll</option>
+                <option value="mobiscroll-dark">Mobiscroll Dark</option>
+                <option value="android">Android</option>
+                <option value="android-holo">Android Holo</option>
+                <option value="android-holo-light">Android Holo Light</option>
                 <option value="ios">iOS</option>
+                <option value="ios-classic">iOS Classic</option>
+                <option value="sense-ui">Sense UI</option>
+                <option value="wp">Windows Phone</option>
+                <option value="wp-light">Windows Phone Light</option>
             </select>
         </div>
         <div>
